@@ -137,7 +137,7 @@ header .links ul li:not(:last-child) a{
 
 /* <landing> */
 .landing{
-    background: url(../images/bg.jpeg) center/cover no-repeat;
+    background: url(../images/bg_landing.webp) center/cover no-repeat;
     height: calc(100vh - 64px);
     width: 100%;
     position: relative;
@@ -161,6 +161,44 @@ header .links ul li:not(:last-child) a{
 }
 .intro-text p{
     font-size: 1.3rem;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 /* </landing> */
+
+/* <features> */
+.features{
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+    text-transform: capitalize;
+}
+
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.features .feature{
+    padding: 25px;
+    text-align: center;
+}
+
+.features .feature i{
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.features .feature h3{
+    font-weight: 800;
+    margin: 25px 0;
+    font-size: 1.6rem;
+}
+
+.features .feature p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #777;
+}
+/* </features> */

@@ -24,6 +24,11 @@ html{
     scroll-behavior: smooth;
 }
 
+/* website intro animation */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 body{
     font-family: 'Work Sans', sans-serif;
 }
@@ -32,6 +37,22 @@ body{
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* smooth appearance animation for all Elements except: main page , footer*/
+.container:not(header .container, .landing, footer){
+    animation: appear ease;
+    animation-timeline: view(); /* start animation when element becomes visible */
+    animation-range: entry 0% cover 60%; /* animation runs from 0% to 50% of element in view */
+}
+
+@keyframes appear {
+    from {
+        opacity: 0; /* start invisible */
+    }
+    to {
+        opacity: 1; /* fully visible */
+    }
 }
 
 /* small */
@@ -91,6 +112,7 @@ header{
     z-index: 9;
     background-color: #fff;
     min-width: 100%;
+    animation: fade-in 1.5s;
 }
 header .container{
     display: flex;
@@ -180,6 +202,7 @@ header .links ul li:not(:last-child) a{
     height: 100vh;
     width: 100%;
     position: relative;
+    animation: fade-in 1.5s;
 }
 
 .landing .intro-text{
